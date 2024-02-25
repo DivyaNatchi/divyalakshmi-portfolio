@@ -1,0 +1,17 @@
+@use "../abstract/colors";
+
+:root {
+  $active-theme: colors.$light-theme;
+
+  @each $prop, $value in $active-theme {
+    --#{$prop}: #{$value};
+  }
+}
+
+.dark-theme {
+  $active-theme: colors.$dark-theme;
+
+  @each $prop, $value in $active-theme {
+    --#{$prop}: #{$value};
+  }
+}

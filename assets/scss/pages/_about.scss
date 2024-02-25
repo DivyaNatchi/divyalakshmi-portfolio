@@ -1,0 +1,50 @@
+.about .container .content {
+  column-gap: 40px;
+  width: 100%;
+
+  .about-info {
+    .description {
+      max-width: 100%;
+
+      h3 {
+        font-size: 2em;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      h4 {
+        font-size: 1.3em;
+        font-weight: 600;
+        margin-bottom: 10px;
+
+        span {
+          color: var(--second-color);
+        }
+      }
+
+      p {
+        color: var(--third-color);
+        font-size: var(--normal-font-size);
+        margin-bottom: 15px;
+        padding-bottom: 25px;
+        border-bottom: 2px solid var(--line-color);
+      }
+    }
+    .strengths-list {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .list-item {
+        margin-top: 20px;
+        color: var(--third-color);
+        font-size: var(--normal-font-size);
+
+        i {
+          margin-right: 0.5em;
+          color: var(--second-color);
+          font-weight: 600;
+          font-size: x-small;
+        }
+      }
+    }
+  }
+}
