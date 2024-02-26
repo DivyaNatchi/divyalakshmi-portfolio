@@ -22,3 +22,25 @@
     display: block;
   }
 }
+
+.ScrollToTop-btn {
+  z-index: 99999;
+  position: fixed;
+  right: 0;
+  bottom: 20px;
+  width: 45px;
+  height: 45px;
+  background: var(--second-color);
+  color: #fff;
+  font-size: var(--small-font-size);
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.ScrollToTop-btn.active {
+  right: 20px;
+  pointer-events: all;
+  opacity: 1;
+}

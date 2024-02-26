@@ -146,6 +146,28 @@ li {
   display: block;
 }
 
+.ScrollToTop-btn {
+  z-index: 99999;
+  position: fixed;
+  right: 0;
+  bottom: 20px;
+  width: 45px;
+  height: 45px;
+  background: var(--second-color);
+  color: #fff;
+  font-size: var(--small-font-size);
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.ScrollToTop-btn.active {
+  right: 20px;
+  pointer-events: all;
+  opacity: 1;
+}
+
 /*=======Header=======*/
 header {
   position: fixed;
@@ -430,6 +452,9 @@ header .nav-bar .nav-menu-btn {
 .skills .container .content .skills-info .bar:hover {
   transform: scale(1.03);
 }
+.skills .container .content .certification-swiper {
+  margin-bottom: 80px;
+}
 .skills .container .content .certification-swiper .swiper-wrapper {
   margin-top: 30px;
 }
@@ -481,6 +506,123 @@ header .nav-bar .nav-menu-btn {
 .skills .container .content .certification-swiper .swiper-pagination-bullet,
 .skills .container .content .certification-swiper .swiper-pagination-bullet-active {
   background: var(--second-color);
+}
+.skills .container .content .experience-card {
+  background: var(--card-bg-color);
+  border-bottom: 3px solid var(--second-color);
+  padding: 35px;
+  border-radius: 6px;
+  box-shadow: var(--box-shawdow);
+  transition: 0.3s ease;
+}
+.skills .container .content .experience-card .upper {
+  line-height: 30px;
+}
+.skills .container .content .experience-card h3 {
+  font-size: 1.3em;
+  font-weight: 700;
+}
+.skills .container .content .experience-card span {
+  color: var(--third-color);
+}
+.skills .container .content .experience-card .hr {
+  width: 100%;
+  height: 2px;
+  background: var(--line-color);
+  margin: 10px 0 22px;
+}
+.skills .container .content .experience-card:hover {
+  transform: scale(1.03);
+}
+
+.contact .container .content {
+  width: 100%;
+}
+.contact .container .content .contact-list {
+  display: flex;
+  justify-content: space-between;
+}
+.contact .container .content .contact-list li {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+.contact .container .content .contact-list li h3 {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.contact .container .content .contact-list li h3 i {
+  color: var(--third-color);
+  font-size: 1.3em;
+  margin-right: 10px;
+}
+.contact .container .content .contact-list li span,
+.contact .container .content .contact-list li a {
+  color: var(--third-color);
+  margin-left: 20px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--second-color);
+  width: 100%;
+  top: 50px;
+  padding: 3rem 2rem;
+  color: #fff;
+}
+footer a {
+  color: #fff;
+}
+footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1150px;
+}
+footer .footer-container .about h2 {
+  font-size: 3em;
+  font-weight: 600;
+  background: linear-gradient(to top, transparent 0%, #fff 50%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.8;
+}
+footer .footer-container .about p {
+  font-size: var(--normal-font-size);
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+footer .footer-container .info h3 {
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-align: center;
+}
+footer .footer-container .info ul {
+  display: flex;
+}
+footer .footer-container .info a {
+  margin: 20px;
+}
+footer .footer-container .follow {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+footer .footer-container .follow h3 {
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+footer .footer-container .follow ul {
+  display: flex;
+}
+footer .footer-container .follow a {
+  margin: 20px;
+  font-size: 1.5em;
 }
 
 /*# sourceMappingURL=styles.css.map */

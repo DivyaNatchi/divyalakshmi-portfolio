@@ -1,0 +1,30 @@
+.contact .container .content {
+  width: 100%;
+
+  .contact-list {
+    display: flex;
+    justify-content: space-between;
+    li {
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+
+      h3 {
+        font-size: 1.3em;
+        font-weight: 600;
+
+        i {
+          color: var(--third-color);
+          font-size: 1.3em;
+          margin-right: 10px;
+        }
+      }
+
+      span,
+      a {
+        color: var(--third-color);
+        margin-left: 20px;
+      }
+    }
+  }
+}

@@ -31,6 +31,11 @@
     <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body>
+    <!--=======Scroll to top button=======-->
+
+    <div class="ScrollToTop-btn flex-center">
+      <i class="fas fa-arrow-up"></i>
+    </div>
     <!--=======Light/Dark theme button=======-->
     <div class="theme-btn flex-center">
       <i class="fas fa-moon"></i>
@@ -39,9 +44,9 @@
 
     <!--=======Header=======-->
     <header>
-      <div class="nav-bar">
+      <div class="nav-bar" aria-label="Main Navigation">
         <a href="#" class="logo">Divyalakshmi</a>
-        <div class="navigation">
+        <div class="navigation" aria-hidden="true">
           <div class="nav-items">
             <div class="nav-close-btn"></div>
             <a href="#home">Home</a>
@@ -51,7 +56,13 @@
             <a href="#contact">Contact</a>
           </div>
         </div>
-        <div class="nav-menu-btn"></div>
+        <div
+          class="nav-menu-btn"
+          role="button"
+          aria-expanded="false"
+          aria-controls="nav-items"
+          aria-label="Toggle Navigation Menu"
+        ></div>
       </div>
     </header>
 
@@ -59,9 +70,13 @@
     <section class="home flex-center" id="home">
       <div class="home-container">
         <div class="home-img">
-          <img src="./assets/img/divya.png" alt="Divyalakshmi picture" />
+          <img
+            src="./assets/img/divya.png"
+            alt="Divyalakshmi profile picture"
+            aria-label="Profile picture of Divyalakshmi"
+          />
         </div>
-        <div class="info">
+        <div class="info" role="region" aria-label="Introduction">
           <h2>Hi, I am Divyalakshmi</h2>
           <h3>Software Developer</h3>
           <p>
@@ -69,19 +84,48 @@
             for crafting clean and efficient code.
           </p>
         </div>
-        <div class="media-icons">
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin"></i></a>
+        <div
+          class="media-icons"
+          role="contentinfo"
+          aria-label="Social Media Links"
+        >
+          <a
+            href="https://www.linkedin.com/in/divyalakshmi-natesan"
+            target="_blank"
+            aria-label="LinkedIn Profile"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/natchimuthu.gunasekaran.5"
+            target="_blank"
+            aria-label="Facebook Profile"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/divyalakshmi.natesan/"
+            target="_blank"
+            aria-label="Instagram Profile"
+            ><i class="fab fa-instagram"></i
+          ></a>
         </div>
       </div>
-      <a href="#about" class="scroll-down"
-        >Scroll Down <i class="fas fa-arrow-down"></i>
+      <a
+        href="#about"
+        class="scroll-down"
+        role="button"
+        aria-label="Scroll Down"
+      >
+        Scroll Down <i class="fas fa-arrow-down"></i>
       </a>
     </section>
 
     <!--=======About section=======-->
-    <section class="about section" id="about">
+    <section
+      class="about section"
+      id="about"
+      role="region"
+      aria-label="About Me"
+    >
       <div class="container flex-center">
         <h1 class="section-title-01">About Me</h1>
         <h2 class="section-title-02">About Me</h2>
@@ -102,7 +146,7 @@
                 adapt to new environments.
               </p>
             </div>
-            <ul class="strengths-list">
+            <ul class="strengths-list" role="list" aria-label="Strengths">
               <li class="list-item">
                 <i class="fa-solid fa-circle-half-stroke"></i>Active listener
               </li>
@@ -121,6 +165,8 @@
                 href="./assets/cv/DivyaResume - Feb-2024.pdf"
                 target="_blank"
                 class="btn"
+                role="link"
+                aria-label="Download CV"
                 >Download CV <i class="fas fa-download"></i
               ></a>
             </ul>
@@ -130,15 +176,24 @@
     </section>
 
     <!--=======Skills section=======-->
-    <section class="skills section" id="skills">
+    <section
+      class="skills section"
+      id="skills"
+      role="region"
+      aria-label="Skills"
+    >
       <div class="container flex-center">
         <h1 class="section-title-01">Skills</h1>
         <h2 class="section-title-02">Skills</h2>
         <div class="content">
-          <div class="skills-description">
+          <div class="skills-description" role="heading">
             <h3>Education & Techincal Proficiencies</h3>
           </div>
-          <div class="skills-info">
+          <div
+            class="skills-info"
+            role="region"
+            aria-label="Education, Languages, Tools, and Version Control"
+          >
             <div class="education">
               <h4><label>Education</label></h4>
               <li class="item">
@@ -256,7 +311,11 @@
               </ul>
             </div>
           </div>
-          <div class="skills-description">
+          <div
+            class="skills-description"
+            role="region"
+            aria-label="Professional Development"
+          >
             <h3>Professional Development</h3>
             <p>
               I have pursued various courses and certifications to enhance my
@@ -270,7 +329,11 @@
           </div>
 
           <!-- Slider main container -->
-          <div class="swiper certification-swiper">
+          <div
+            class="swiper certification-swiper"
+            role="region"
+            aria-label="Certifications"
+          >
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
               <!-- Slides -->
@@ -363,67 +426,150 @@
                     proficiency in utilizing Git and GitHub for effective
                     version control and collaborative software development..
                   </p>
-                  <h3>Aria Collins</h3>
-                  <span>Marketing Manager</span>
+                  <h3>Coursera</h3>
+                  <span>Version Control</span>
                 </div>
               </div>
             </div>
-            <div class="swiper-button-next">
+            <div class="swiper-button-next" aria-label="Next Slide">
               <i class="fas fa-chevron-right"></i>
             </div>
-            <div class="swiper-button-prev">
+            <div class="swiper-button-prev" aria-label="Previous Slide">
               <i class="fas fa-chevron-left"></i>
             </div>
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination" aria-label="Pagination"></div>
           </div>
 
-          <!-- <div class="skills-description">
+          <div class="skills-description" role="heading">
             <h3>Work & Experience</h3>
           </div>
-          <div class="skills-info">
+          <div class="skills-info" role="region" aria-label="Work Experience">
             <div class="experience-card">
               <div class="upper">
-                <h3>Sr. Graphic Designer</h3>
-                <h5>Part Time | Office</h5>
-                <span>2020 - 2021</span>
+                <h3>MCCI Interconnect Solutions Pvt. Ltd</h3>
+                <span>Mar 2012 - Aug 2013</span>
               </div>
               <div class="hr"></div>
-              <h4><label>Avada Theme.</label></h4>
+              <h4><label>MBIM-DVT</label></h4>
               <p>
-                I design and develop services for customers of all sizes,
-                specializing in creating stylish, modern websites
+                Mobile Broadband Interface Model – Device Verification Tool
+                (MBIM-DVT) is used to verify the MBIM device which follows the
+                MBIM protocol standard.
               </p>
             </div>
             <div class="experience-card">
               <div class="upper">
-                <h3>Cr. Web Developer</h3>
-                <h5>Full Time | InHouse</h5>
-                <span>2019 - 2020</span>
+                <h3>MCCI Interconnect Solutions Pvt. Ltd</h3>
+                <span>Jan 2013 - Aug 2013</span>
               </div>
               <div class="hr"></div>
-              <h4><label>ib-themes ltd.</label></h4>
+              <h4><label>MCCI Build System</label></h4>
               <p>
-                design and develop services for customers of all sizes,
-                specializing in creating stylish, modern websites
+                MCCI Build System is an automated system to build the device
+                specific drivers. It uses WIN7WDK to build the device specific
+                drivers and runs on WIN7 and earlier versions of the Windows
+                operating system environment.
               </p>
             </div>
             <div class="experience-card">
               <div class="upper">
-                <h3>Jr. Web Developer</h3>
-                <h5>Full Time | Remote</h5>
-                <span>2018 - 2019</span>
+                <h3>Softeon India Pvt Lt</h3>
+                <span>Dec 2010 - Jan 2012</span>
               </div>
               <div class="hr"></div>
-              <h4><label>Creative Gigs.</label></h4>
+              <h4><label>Report Generation</label></h4>
               <p>
-                design and develop services for customers of all sizes,
-                specializing in creating stylish, modern websites
+                Report is generated as per the client’s need. PDF Report is
+                generated using Crystal Clear Generator. Excel Report is
+                Generated using Java language. Client use this report for their
+                warehouse maintenance and billing system.
               </p>
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
     </section>
+
+    <!--=======Contact section=======-->
+    <section
+      class="contact section"
+      id="contact"
+      role="region"
+      aria-label="Contact Information"
+    >
+      <div class="container flex-center">
+        <h1 class="section-title-01">Contact Me</h1>
+        <h2 class="section-title-02">Contact Me</h2>
+        <div class="content">
+          <ul class="contact-list">
+            <li>
+              <h3 class="item-title"><i class="fas fa-phone"></i>Phone</h3>
+              <span>+974-50516167</span>
+            </li>
+            <li>
+              <h3 class="item-title">
+                <i class="fas fa-envelope"></i>Email Address
+              </h3>
+              <span>
+                <a href="mailto:ndivyalakshmi88@gmail.com"
+                  >ndivyalakshmi88@gmail.com</a
+                >
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!--=======Footer=======-->
+
+    <footer role="contentinfo">
+      <div class="footer-container">
+        <div class="about group">
+          <h2>Divyalakshmi</h2>
+          <p>Sofware Developer</p>
+        </div>
+        <div class="hr"></div>
+        <div class="info group">
+          <h3>More</h3>
+          <ul>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+          </ul>
+        </div>
+        <div class="hr"></div>
+        <div class="follow group">
+          <h3>Follow</h3>
+          <ul>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/divyalakshmi-natesan"
+                target="_blank"
+                aria-label="LinkedIn Profile"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/natchimuthu.gunasekaran.5"
+                target="_blank"
+                aria-label="Facebook Profile"
+                ><i class="fab fa-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/divyalakshmi.natesan/"
+                target="_blank"
+                aria-label="Instagram Profile"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
     <!--=======External scripts=======-->
     <script src="./assets/js/swiper-bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
