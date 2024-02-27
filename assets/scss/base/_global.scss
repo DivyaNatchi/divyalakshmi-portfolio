@@ -1,4 +1,5 @@
 @use "./root";
+@use "../abstract/mixins" as mixins;
 
 /*=======Common styles for all sections=======*/
 .flex-center {
@@ -12,7 +13,7 @@
   max-width: 1150px;
   margin-left: auto;
   margin-right: auto;
-  padding: 6rem 2rem 2rem;
+  padding: 4rem 2rem 2rem;
 }
 
 .section-title-01 {
@@ -23,12 +24,23 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0.1;
+
+  // Small devices (landscape phones, 576px and up)
+  @include mixins.responsive(sm) {
+    font-size: 3em;
+  }
 }
 
 .section-title-02 {
   font-size: 2.5em;
   font-weight: 700;
   transform: translateY(-80px);
+
+  // Small devices (landscape phones, 576px and up)
+  @include mixins.responsive(sm) {
+    font-size: 2em;
+    transform: translateY(-65px);
+  }
 }
 
 .section-title-02::before {

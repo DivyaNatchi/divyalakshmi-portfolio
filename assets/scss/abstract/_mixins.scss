@@ -1,0 +1,15 @@
+@mixin responsive($breakpoint) {
+  // Medium devices (tablets, 768px)
+  @if ($breakpoint == md) {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  // Small devices (landscape phones, 576px)
+  @else if ($breakpoint == sm) {
+    @media only screen and (max-width: 576px) {
+      @content;
+    }
+  }
+}

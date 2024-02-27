@@ -1,3 +1,5 @@
+@use "../abstract/mixins" as mixins;
+
 .skills .container .content {
   width: 100%;
 
@@ -17,6 +19,11 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
     margin: 0 auto 80px;
+
+    // Small devices (landscape phones, 576px and up)
+    @include mixins.responsive(sm) {
+      gap: 40px;
+    }
 
     h4 {
       margin-bottom: 20px;
@@ -149,6 +156,11 @@
         gap: 50px;
         margin: 20px 0;
 
+        /*=======Media query max-width: 768px=======*/
+        @include mixins.responsive(md) {
+          flex-direction: column;
+        }
+
         .certification-img {
           width: 250px;
           height: 250px;
@@ -164,6 +176,11 @@
 
         .certification-details {
           max-width: 500px;
+
+          /*=======Media query max-width: 768px=======*/
+          @include mixins.responsive(md) {
+            text-align: center;
+          }
 
           p {
             font-size: 1.2em;

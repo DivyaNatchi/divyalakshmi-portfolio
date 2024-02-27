@@ -1,3 +1,5 @@
+@use "../abstract/mixins" as mixins;
+
 /*=======Header=======*/
 
 header {
@@ -58,5 +60,81 @@ header {
     .nav-menu-btn {
       display: none;
     }
+
+    .navigation.active .nav-items {
+      transform: translateY(0px);
+    }
+  }
+}
+
+/*=======Media query max-width: 768px=======*/
+@include mixins.responsive(md) {
+  .navigation {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--transparent-color-01);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease;
+
+    &.active {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .nav-items {
+    position: relative;
+    background: var(--modal-bg-color);
+    width: 576px;
+    max-width: 576px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--box-shawdow);
+    transform: translateY(-50px);
+    transition: 0.3s ease;
+  }
+
+  .navigation.active .nav-items {
+    transform: translateY(0px);
+  }
+  .nav-items a {
+    margin: 15px 50px;
+  }
+
+  .nav-close-btn {
+    position: absolute;
+    background: url("../img/close-btn.png") no-repeat;
+    filter: var(--color-filter);
+    background-size: 12px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    cursor: pointer;
+  }
+  .nav-menu-btn {
+    // position: absolute;
+    background: url("../img/menu-btn.png") no-repeat;
+    filter: var(--color-filter);
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: block !important;
   }
 }

@@ -1,13 +1,34 @@
+@use "../abstract/mixins";
+
 .contact .container .content {
   width: 100%;
 
   .contact-list {
     display: flex;
     justify-content: space-between;
+
+    /*=======Media query max-width: 768px=======*/
+    @include mixins.responsive(md) {
+      justify-content: space-around;
+    }
+
+    /*=======Media query max-width: 576px=======*/
+    @include mixins.responsive(sm) {
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
     li {
       margin-bottom: 40px;
       display: flex;
       align-items: center;
+      justify-content: center;
+
+      /*=======Media query max-width: 768px=======*/
+      @include mixins.responsive(md) {
+        flex-direction: column;
+        gap: 10px;
+      }
 
       h3 {
         font-size: 1.3em;
