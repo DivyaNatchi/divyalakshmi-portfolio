@@ -123,3 +123,18 @@ navItems.forEach((navItem) => {
     navigation.classList.remove("active");
   });
 });
+
+// JavaScript to toggle aria-hidden attribute based on screen width and set focus
+window.addEventListener("DOMContentLoaded", function () {
+  if (window.innerWidth <= 768) {
+    navigation.setAttribute("aria-hidden", "false"); // Show navigation for mobile devices
+    menuBtn.setAttribute("aria-hidden", "false");
+    menuBtn.setAttribute("aria-expanded", "true");
+    closeBtn.setAttribute("aria-hidden", "false");
+  } else {
+    navigation.setAttribute("aria-hidden", "true"); // Hide navigation for larger screens
+    menuBtn.setAttribute("aria-hidden", "true");
+    menuBtn.setAttribute("aria-expanded", "false");
+    closeBtn.setAttribute("aria-hidden", "true");
+  }
+});
