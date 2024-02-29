@@ -117,4 +117,12 @@ footer {
       }
     }
   }
+
+  .created-by {
+    P {
+      font-size: var(--normal-font-size);
+      font-weight: 400;
+      margin-top: 50px;
+    }
+  }
 }
