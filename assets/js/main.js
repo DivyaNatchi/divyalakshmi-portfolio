@@ -81,7 +81,6 @@ scrollTopBtn.addEventListener("click", () => {
 });
 
 //Navigation menu items active on page scroll
-
 window.addEventListener("scroll", () => {
   const sections = document.querySelectorAll("section");
   const scrollY = window.scrollY;
@@ -90,18 +89,43 @@ window.addEventListener("scroll", () => {
     let sectionHeight = current.offsetHeight;
     let sectionTop = current.offsetTop - 50;
     let id = current.getAttribute("id");
+    const navItem = document.querySelector(".nav-items a[href='#" + id + "']");
 
-    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      document
-        .querySelector(".nav-items a[href*=" + id + "]")
-        .classList.add("active");
+    if (id === "contact") {
+      // Check if the section is in the viewport
+      if (isInViewport(current)) {
+        // Add active class to the navigation item
+        navItem.classList.add("active");
+        document
+          .querySelector(".nav-items a[href='#skills']")
+          .classList.remove("active");
+      } else {
+        // Remove active class from the navigation item
+        navItem.classList.remove("active");
+      }
     } else {
-      document
-        .querySelector(".nav-items a[href*=" + id + "]")
-        .classList.remove("active");
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        navItem.classList.add("active");
+      } else {
+        navItem.classList.remove("active");
+      }
     }
   });
 });
+
+function isInViewport(element) {
+  // calculates the size and position of the element relative to the viewport
+  const bounding = element.getBoundingClientRect();
+
+  return (
+    bounding.top >= 0 &&
+    bounding.left >= 0 &&
+    bounding.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    bounding.right <=
+      (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
 
 //Responsive navigation menu toggle
 const menuBtn = document.querySelector(".nav-menu-btn");
@@ -110,7 +134,6 @@ const navigation = document.querySelector(".navigation");
 const navItems = document.querySelectorAll(".nav-items a");
 
 menuBtn.addEventListener("click", () => {
-  console.log("menubtn");
   navigation.classList.add("active");
 });
 
