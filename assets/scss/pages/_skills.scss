@@ -138,6 +138,10 @@
         width: 75%;
       }
 
+      .react::before {
+        width: 60%;
+      }
+
       &:hover {
         transform: scale(1.03);
       }

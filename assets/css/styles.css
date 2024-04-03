@@ -736,6 +736,9 @@ footer .created-by P {
 .skills .container .content .skills-info .bar .sass::before {
   width: 75%;
 }
+.skills .container .content .skills-info .bar .react::before {
+  width: 60%;
+}
 .skills .container .content .skills-info .bar:hover {
   transform: scale(1.03);
 }
