@@ -1,5 +1,203 @@
 @use "../abstract/mixins" as mixins;
 
+// New Skills Section (2026)
+.skills__wrapper {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.skills__panel {
+  flex: 1 1 0;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.skills__panel--carousel {
+  max-width: 500px;
+  align-items: center;
+}
+
+.skills__carousel {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  height: 400px;
+}
+
+.skills__carousel-btn {
+  background: var(--second-color);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: absolute;
+  z-index: 10;
+}
+.skills__carousel-btn--prev {
+  left: -1.25rem;
+}
+.skills__carousel-btn--next {
+  right: -1.25rem;
+}
+.skills__carousel-btn:hover {
+  background: var(--hover-color);
+}
+
+.skills__cards {
+  width: 100%;
+  height: 100%;
+}
+
+.skills__card {
+  background: var(--card-bg-color);
+  border-radius: 1.2rem;
+  box-shadow: var(--box-shawdow);
+  border-bottom: 3px solid var(--second-color);
+  padding: 2rem 1.5rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skills__card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: var(--second-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.skills__card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.skills__logo {
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-right: 0.7rem;
+  vertical-align: middle;
+  filter: brightness(0) saturate(100%) invert(34%) sepia(82%) saturate(1451%)
+    hue-rotate(232deg) brightness(88%) contrast(88%);
+}
+
+// Swiper effect overrides
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Card hover effect
+.skills__card:hover {
+  transform: scale(1.03);
+  box-shadow: var(--box-shawdow);
+}
+
+// Description Panel
+.skills__panel--desc {
+  max-width: 400px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 2rem 1.5rem;
+  background: var(--card-bg-color);
+  border-radius: 1.2rem;
+  box-shadow: var(--box-shawdow);
+  border-bottom: 3px solid var(--second-color);
+}
+
+.skills__desc-block {
+  width: 100%;
+}
+
+.skills__desc-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: var(--second-color);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+
+.skills__desc-text {
+  font-size: 1rem;
+  color: var(--third-color);
+  line-height: 1.6;
+}
+
+// Responsive adjustments
+@media (max-width: 900px) {
+  .skills__wrapper {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .skills__panel--carousel,
+  .skills__panel--desc {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .skills__carousel {
+    max-width: 100%;
+    height: 350px;
+  }
+  .skills__cards {
+    width: 100%;
+    min-height: 300px;
+  }
+  .skills__carousel-btn--prev {
+    left: 0.5rem;
+  }
+  .skills__carousel-btn--next {
+    right: 0.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .skills__panel--desc {
+    padding: 1.2rem 0.7rem;
+  }
+  .skills__card {
+    padding: 1.2rem 0.7rem;
+  }
+}
+
+// Professional Development Section
 .skills .container .content {
   width: 100%;
 
@@ -24,9 +222,27 @@
     @include mixins.responsive(sm) {
       gap: 40px;
     }
+  }
+
+  .experience-card {
+    background: var(--card-bg-color);
+    border-bottom: 3px solid var(--second-color);
+    padding: 35px;
+    border-radius: 6px;
+    box-shadow: var(--box-shawdow);
+    transition: 0.3s ease;
+
+    .upper {
+      line-height: 30px;
+    }
+
+    h3 {
+      font-size: 1.3em;
+      font-weight: 700;
+    }
 
     h4 {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
 
       label {
         background: var(--second-color);
@@ -38,113 +254,24 @@
       }
     }
 
-    .item {
-      background: var(--card-bg-color);
-      box-shadow: var(--box-shawdow);
-      border-bottom: 3px solid var(--second-color);
-      padding: 20px;
-      margin-top: 15px;
-      border-radius: 6px;
-      transition: 0.3s ease;
-
-      .year {
-        font-size: var(--small-font-size);
-        margin-bottom: 6px;
-      }
-
-      p {
-        color: var(--third-color);
-        font-size: var(--small-font-size);
-      }
-
-      span {
-        color: var(--first-color);
-        font-size: var(--normal-font-size);
-        font-weight: 500;
-      }
-
-      h3 {
-        color: var(--first-color);
-        font-size: var(--small-font-size);
-      }
-
-      &-tools {
-        margin-bottom: 1.5px;
-        i {
-          color: var(--second-color);
-        }
-      }
-
-      &:hover {
-        transform: scale(1.03);
-      }
+    span {
+      color: var(--third-color);
     }
 
-    .bar {
-      background: var(--card-bg-color);
-      box-shadow: var(--box-shawdow);
-      padding: 20px;
-      margin-bottom: 10px;
-      border-radius: 6px;
-      transition: 0.3s ease;
+    p {
+      color: var(--third-color);
+      font-size: var(--small-font-size);
+    }
 
-      .info {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 5px;
-        font-size: var(--small-font-size);
+    .hr {
+      width: 100%;
+      height: 2px;
+      background: var(--line-color);
+      margin: 10px 0 22px;
+    }
 
-        span {
-          font-weight: 500;
-        }
-      }
-
-      .line {
-        position: relative;
-        width: 100%;
-        height: 7px;
-        background: #c5cadf;
-        border-radius: 2px;
-
-        &::before {
-          content: "";
-          position: absolute;
-          height: 100%;
-          top: 0;
-          left: 0;
-          background: var(--second-color);
-          border-radius: 2px;
-        }
-      }
-
-      .html::before {
-        width: 80%;
-      }
-
-      .css::before {
-        width: 75%;
-      }
-
-      .javascript::before {
-        width: 70%;
-      }
-
-      .bootstrap::before {
-        width: 75%;
-      }
-
-      .sass::before {
-        width: 75%;
-      }
-
-      .react::before {
-        width: 60%;
-      }
-
-      &:hover {
-        transform: scale(1.03);
-      }
+    &:hover {
+      transform: scale(1.03);
     }
   }
 
@@ -170,11 +297,15 @@
           height: 250px;
           overflow: hidden;
           border-radius: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #f5f5f5;
 
           img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
           }
         }
 
@@ -221,45 +352,6 @@
     .swiper-pagination-bullet,
     .swiper-pagination-bullet-active {
       background: var(--second-color);
-    }
-  }
-
-  .experience-card {
-    background: var(--card-bg-color);
-    border-bottom: 3px solid var(--second-color);
-    padding: 35px;
-    border-radius: 6px;
-    box-shadow: var(--box-shawdow);
-    transition: 0.3s ease;
-
-    .upper {
-      line-height: 30px;
-    }
-
-    h3 {
-      font-size: 1.3em;
-      font-weight: 700;
-    }
-
-    // h5 {
-    //   font-size: var(--small-font-size);
-    //   font-weight: 500;
-    //   font-style: italic;
-    // }
-
-    span {
-      color: var(--third-color);
-    }
-
-    .hr {
-      width: 100%;
-      height: 2px;
-      background: var(--line-color);
-      margin: 10px 0 22px;
-    }
-
-    &:hover {
-      transform: scale(1.03);
     }
   }
 }

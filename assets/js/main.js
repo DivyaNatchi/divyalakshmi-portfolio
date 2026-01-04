@@ -21,6 +21,26 @@ const swiper = new Swiper(".certification-swiper", {
   },
 });
 
+//Skills Section - Swiper with Cards Effect
+const skillsSwiper = new Swiper(".skills__carousel", {
+  effect: "cards",
+  grabCursor: true,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  cardsEffect: {
+    perSlideOffset: 8,
+    perSlideRotate: 2,
+    slideShadows: false,
+  },
+  navigation: {
+    nextEl: ".skills__carousel-btn--next",
+    prevEl: ".skills__carousel-btn--prev",
+  },
+});
+
 //Website dark/light theme
 
 const themeBtn = document.querySelector(".theme-btn");

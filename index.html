@@ -23,7 +23,7 @@
     />
 
     <!-- custom styles -->
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
 
     <!-- Swipper bundle -->
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
@@ -200,138 +200,173 @@
         <h1 class="section-title-01">Skills</h1>
         <h2 class="section-title-02">Skills</h2>
         <div class="content">
-          <div class="skills-description" role="heading">
-            <h3>Education & Techincal Proficiencies</h3>
-          </div>
           <div
-            class="skills-info"
+            class="skills-description"
             role="region"
-            aria-label="Education, Languages, Tools, and Version Control"
+            aria-label="Technical Proficiencies"
           >
-            <div class="education">
-              <h4><label>Education</label></h4>
-              <li class="item">
-                <span class="year">2006-2010</span>
-                <p>
-                  <span>B.Tech in Information Technical</span> - Dr. Sivanthi
-                  Aditanar college of Engineering, Anna University
-                </p>
-              </li>
-              <li class="item">
-                <span class="year">2005-2006</span>
-                <p>
-                  <span>HSC</span> - Palaniyappa Memorial Higher secondary
-                  school, TN State Board
-                </p>
-              </li>
-              <li class="item">
-                <span class="year">2003-2004</span>
-                <p>
-                  <span>SSLC</span> - Palaniyappa Memorial Higher secondary
-                  school, TN State Board
-                </p>
-              </li>
-            </div>
-            <div class="education">
-              <h4><label>Languages</label></h4>
-              <ul class="bars">
-                <li class="bar">
-                  <div class="info">
-                    <span>HTML</span>
-                    <span>80%</span>
-                  </div>
-                  <div class="line html"></div>
-                </li>
-                <li class="bar">
-                  <div class="info">
-                    <span>CSS</span>
-                    <span>75%</span>
-                  </div>
-                  <div class="line css"></div>
-                </li>
-                <li class="bar">
-                  <div class="info">
-                    <span>Javascript</span>
-                    <span>70%</span>
-                  </div>
-                  <div class="line javascript"></div>
-                </li>
-                <li class="bar">
-                  <div class="info">
-                    <span>Bootstrap</span>
-                    <span>75%</span>
-                  </div>
-                  <div class="line bootstrap"></div>
-                </li>
-                <li class="bar">
-                  <div class="info">
-                    <span>SCSS</span>
-                    <span>75%</span>
-                  </div>
-                  <div class="line sass"></div>
-                </li>
-                <li class="bar">
-                  <div class="info">
-                    <span>ReactJS</span>
-                    <span>60%</span>
-                  </div>
-                  <div class="line react"></div>
-                </li>
-              </ul>
-            </div>
-            <div class="education">
-              <h4><label>Tools & Version Control</label></h4>
-              <ul class="edu-list">
-                <li class="item">
-                  <ul>
-                    <h3>Tools :</h3>
-                    <li class="item-tools">
-                      <i class="fab fa-microsoft"></i> Visual Studio Code
+            <h3>Technical Proficiencies</h3>
+          </div>
+        </div>
+        <div class="skills__wrapper">
+          <!-- Left Panel: Carousel -->
+          <div class="skills__panel skills__panel--carousel">
+            <div class="skills__carousel swiper">
+              <div class="skills__cards swiper-wrapper">
+                <!-- Frontend Card -->
+                <div class="skills__card swiper-slide" data-skill="frontend">
+                  <h3 class="skills__card-title">Frontend</h3>
+                  <ul class="skills__card-list">
+                    <li>
+                      <img
+                        src="assets/logos/react.svg"
+                        alt="React.js logo"
+                        class="skills__logo"
+                      />
+                      React.js
                     </li>
-                    <li class="item-tools">
-                      <i class="fab fa-windows item-tools"></i> Windows Driver
-                      Kit
+                    <li>
+                      <img
+                        src="assets/logos/html-5.svg"
+                        alt="HTML5 logo"
+                        class="skills__logo"
+                      />
+                      HTML5
                     </li>
-                    <li class="item-tools">
-                      <i class="fas fa-usb item-tools"></i> Ellisys USB Analyzer
+                    <li>
+                      <img
+                        src="assets/logos/css.svg"
+                        alt="CSS3 logo"
+                        class="skills__logo"
+                      />
+                      CSS3
                     </li>
-                    <li class="item-tools">
-                      <i class="fab fa-microsoft item-tools"> </i> Microsoft
-                      Visual Studio 2008
+                    <li>
+                      <img
+                        src="assets/logos/css.svg"
+                        alt="SCSS logo"
+                        class="skills__logo"
+                      />
+                      SCSS
                     </li>
-                    <li class="item-tools">
-                      <i class="fas fa-code-branch item-tools"> </i> WinMerge
+                    <li>
+                      <img
+                        src="assets/logos/javascript.svg"
+                        alt="JavaScript logo"
+                        class="skills__logo"
+                      />
+                      JavaScript
                     </li>
-                    <li class="item-tools">
-                      <i class="fas fa-search item-tools"></i> Coverity Static
-                      Analysis Tool
-                    </li>
-                    <li class="item-tools">
-                      <i class="fas fa-gem item-tools"></i> Crystal Clear
-                      Generator
+                    <li>
+                      <img
+                        src="assets/logos/flutter-flow.svg"
+                        alt="FlutterFlow logo"
+                        class="skills__logo"
+                      />
+                      FlutterFlow
                     </li>
                   </ul>
-                </li>
-                <li class="item">
-                  <ul>
-                    <h3>Version Control :</h3>
-                    <li class="item-tools">
-                      <i class="fab fa-git-alt"></i> Git
+                </div>
+                <!-- Backend & Database Card -->
+                <div class="skills__card swiper-slide" data-skill="backend-db">
+                  <h3 class="skills__card-title">Backend &amp; Database</h3>
+                  <ul class="skills__card-list">
+                    <li>
+                      <img
+                        src="assets/logos/node-js.svg"
+                        alt="Node.js logo"
+                        class="skills__logo"
+                      />
+                      Node.js
                     </li>
-                    <li class="item-tools">
-                      <i class="fab fa-github"></i> GitHub
+                    <li>
+                      <img
+                        src="assets/logos/rest-api.svg"
+                        alt="REST API logo"
+                        class="skills__logo"
+                      />
+                      REST API
                     </li>
-                    <li class="item-tools">
-                      <i class="fab fa-bitbucket"></i> Win CVS
+                    <li>
+                      <img
+                        src="assets/logos/aws-dynamodb.svg"
+                        alt="DynamoDB logo"
+                        class="skills__logo"
+                      />
+                      DynamoDB
                     </li>
-                    <li class="item-tools">
-                      <i class="fab fa-sourcetree"></i> SVN
+                    <li>
+                      <img
+                        src="assets/logos/sqlite.svg"
+                        alt="SQLite logo"
+                        class="skills__logo"
+                      />
+                      SQLite
                     </li>
                   </ul>
-                </li>
-              </ul>
+                </div>
+                <!-- Cloud & Deployment Card -->
+                <div
+                  class="skills__card swiper-slide"
+                  data-skill="cloud-deploy"
+                >
+                  <h3 class="skills__card-title">Cloud &amp; Deployment</h3>
+                  <ul class="skills__card-list">
+                    <li>
+                      <img
+                        src="assets/logos/aws.svg"
+                        alt="AWS logo"
+                        class="skills__logo"
+                      />
+                      AWS (S3, Cognito, Lambda, DynamoDB, IAM, CloudWatch)
+                    </li>
+                    <li>
+                      <img
+                        src="assets/logos/docker.svg"
+                        alt="Docker logo"
+                        class="skills__logo"
+                      />
+                      Docker
+                    </li>
+                    <li>
+                      <img
+                        src="assets/logos/github.svg"
+                        alt="GitHub Pages logo"
+                        class="skills__logo"
+                      />
+                      GitHub Pages
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- Custom Navigation Buttons -->
+              <button
+                class="skills__carousel-btn skills__carousel-btn--prev"
+                aria-label="Previous"
+              >
+                <span>&lt;</span>
+              </button>
+              <button
+                class="skills__carousel-btn skills__carousel-btn--next"
+                aria-label="Next"
+              >
+                <span>&gt;</span>
+              </button>
             </div>
           </div>
+          <!-- Right Panel: Description -->
+          <div class="skills__panel skills__panel--desc">
+            <div class="skills__desc-block">
+              <h3 class="skills__desc-title">My Tech Stack</h3>
+              <p class="skills__desc-text">
+                I specialize in building scalable, maintainable UIs with
+                React.js and FlutterFlow, integrating RESTful backends with
+                Node.js, and deploying cloud‑hosted solutions on AWS.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="content">
           <div
             class="skills-description"
             role="region"
@@ -361,7 +396,7 @@
               <div class="swiper-slide">
                 <div class="certification-img">
                   <img
-                    src="./assets/img/career-skills.jpeg"
+                    src="./assets/certificates/career-skills.jpeg"
                     alt="client image"
                   />
                 </div>
@@ -380,7 +415,7 @@
               <div class="swiper-slide">
                 <div class="certification-img">
                   <img
-                    src="./assets/img/front-end-developer.png"
+                    src="./assets/certificates/front-end-developer.png"
                     alt="client image"
                   />
                 </div>
@@ -399,7 +434,7 @@
               <div class="swiper-slide">
                 <div class="certification-img">
                   <img
-                    src="./assets/img/Responsive_Webdesign_Certification.png"
+                    src="./assets/certificates/Responsive_Webdesign_Certification.png"
                     alt="client image"
                   />
                 </div>
@@ -417,7 +452,7 @@
               <div class="swiper-slide">
                 <div class="certification-img">
                   <img
-                    src="./assets/img/JavaScript_and_DataStructure_Certification.png"
+                    src="./assets/certificates/JavaScript_and_DataStructure_Certification.png"
                     alt="client image"
                   />
                 </div>
@@ -436,7 +471,7 @@
               <div class="swiper-slide">
                 <div class="certification-img">
                   <img
-                    src="./assets/img/version-control.png"
+                    src="./assets/certificates/version-control.png"
                     alt="client image"
                   />
                 </div>
@@ -449,6 +484,53 @@
                   </p>
                   <h3>Coursera</h3>
                   <span>Version Control</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="certification-img">
+                  <img
+                    src="./assets/certificates/Dart_Flutter_Zero_to_Mastery[205]_Clean_Architecture.jpg"
+                    alt="Dart & Flutter certification"
+                  />
+                </div>
+                <div class="certification-details">
+                  <p>
+                    In this Dart & Flutter – Zero to Mastery course, I gained
+                    hands-on experience building mobile applications using Dart
+                    and Flutter. I learned to apply clean architecture
+                    principles, manage state effectively, and structure scalable
+                    codebases for real-world projects. The course emphasized
+                    best practices for UI design, navigation, and backend
+                    integration.
+                  </p>
+                  <h3>Udemy</h3>
+                  <span
+                    >Dart & Flutter – Zero to Mastery (Clean Architecture) -
+                    Completed on May 27, 2025</span
+                  >
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="certification-img">
+                  <img
+                    src="./assets/certificates/AWS.jpg"
+                    alt="AWS certificate"
+                  />
+                </div>
+                <div class="certification-details">
+                  <p>
+                    I attended the AWSome Day Online Conference to deepen my
+                    understanding of cloud computing fundamentals and AWS
+                    services. The sessions covered core topics including
+                    compute, storage, database, and security, helping me
+                    strengthen my deployment strategies and cloud architecture
+                    decisions.
+                  </p>
+                  <h3>Amazon Web Services (AWS)</h3>
+                  <span
+                    >AWSome Day Online Conference - Attended on April 10,
+                    2025</span
+                  >
                 </div>
               </div>
             </div>
@@ -548,7 +630,7 @@
       <div class="footer-container">
         <div class="about">
           <h2>Divyalakshmi</h2>
-          <p>Sofware Developer</p>
+          <p>Sofware Consultant</p>
         </div>
         <div class="hr"></div>
         <div class="info">
