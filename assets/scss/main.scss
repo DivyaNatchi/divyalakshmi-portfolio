@@ -1,16 +1,16 @@
 //base
-@import "./base/reset";
-@import "./base/global";
+@use "./base/reset";
+@use "./base/global";
 
 //components
-@import "./components/buttons";
+@use "./components/buttons";
 
 //layouts
-@import "./layouts/header";
-@import "./layouts/footer";
+@use "./layouts/header";
+@use "./layouts/footer";
 
 //pages
-@import "./pages/home";
-@import "./pages/about";
-@import "./pages/skills";
-@import "./pages/contact";
+@use "./pages/home";
+@use "./pages/about";
+@use "./pages/skills";
+@use "./pages/contact";
