@@ -44,40 +44,47 @@
     </div>
 
     <!--=======Header=======-->
-    <header>
-      <div class="nav-bar" aria-label="Main Navigation">
-        <a href="#" class="logo">Divyalakshmi</a>
+    <header role="banner">
+      <nav class="nav-bar" role="navigation" aria-label="Main navigation">
+        <a href="#" class="logo" aria-label="Home - Divyalakshmi Portfolio"
+          >Divyalakshmi</a
+        >
         <div class="navigation" aria-hidden="true">
-          <div class="nav-items">
-            <div class="nav-close-btn"></div>
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+          <div class="nav-items" id="nav-items">
+            <button
+              class="nav-close-btn"
+              aria-label="Close navigation"
+              tabindex="0"
+            ></button>
+            <a href="#home" class="active" id="nav-home">Home</a>
+            <a href="#about" id="nav-about">About</a>
+            <a href="#skills" id="nav-skills">Skills</a>
+            <a href="#contact" id="nav-contact">Contact</a>
           </div>
         </div>
-        <div
+        <button
           class="nav-menu-btn"
           role="button"
           aria-expanded="false"
           aria-controls="nav-items"
           aria-label="Toggle Navigation Menu"
-        ></div>
-      </div>
+          tabindex="0"
+        ></button>
+      </nav>
     </header>
 
+    <main role="main">
     <!--=======Home section=======-->
-    <section class="home flex-center" id="home">
+    <section class="home flex-center" id="home" aria-labelledby="home-title">
       <div class="home-container">
         <div class="home-img">
           <img
             src="./assets/img/Divyalakshmi.jpg"
             alt="Divyalakshmi profile picture"
-            aria-label="Profile picture of Divyalakshmi"
           />
         </div>
         <div class="info" role="region" aria-label="Introduction">
-          <h2>Hi, I am Divyalakshmi</h2>
+          <h2 id="home-title">Hi, I am Divyalakshmi</h2>
           <h3>Software Consultant – React.js · FlutterFlow · Node JS . AWS</h3>
           <p>
             Software Consultant with 4+ years of experience delivering mobile
@@ -87,7 +94,7 @@
             maintainable, and visually accurate UIs with React.js and
             FlutterFlow.
           </p>
-          <a href="#contact" class="btn">Contact Me</a>
+          <a href="#contact" class="btn" aria-label="Contact Me">Contact Me</a>
         </div>
         <div
           class="media-icons"
@@ -98,19 +105,22 @@
             href="https://www.linkedin.com/in/divyalakshmi-natesan"
             target="_blank"
             aria-label="LinkedIn Profile"
-            ><i class="fab fa-linkedin"></i
+            tabindex="0"
+            ><i class="fab fa-linkedin" aria-hidden="true"></i
           ></a>
           <a
             href="https://www.facebook.com/natchimuthu.gunasekaran.5"
             target="_blank"
             aria-label="Facebook Profile"
-            ><i class="fab fa-facebook"></i
+            tabindex="0"
+            ><i class="fab fa-facebook" aria-hidden="true"></i
           ></a>
           <a
             href="https://www.instagram.com/divyalakshmi.natesan/"
             target="_blank"
             aria-label="Instagram Profile"
-            ><i class="fab fa-instagram"></i
+            tabindex="0"
+            ><i class="fab fa-instagram" aria-hidden="true"></i
           ></a>
         </div>
       </div>
@@ -119,8 +129,9 @@
         class="scroll-down"
         role="button"
         aria-label="Scroll Down"
+        tabindex="0"
       >
-        Scroll Down <i class="fas fa-arrow-down"></i>
+        Scroll Down <i class="fas fa-arrow-down" aria-hidden="true"></i>
       </a>
     </section>
 
@@ -129,10 +140,10 @@
       class="about section"
       id="about"
       role="region"
-      aria-label="About Me"
+      aria-labelledby="about-title"
     >
       <div class="container flex-center">
-        <h1 class="section-title-01">About Me</h1>
+        <h1 class="section-title-01" id="about-title">About Me</h1>
         <h2 class="section-title-02">About Me</h2>
         <div class="content flex-center">
           <div class="about-info">
@@ -194,18 +205,18 @@
       class="skills section"
       id="skills"
       role="region"
-      aria-label="Skills"
+      aria-labelledby="skills-title"
     >
       <div class="container flex-center">
-        <h1 class="section-title-01">Skills</h1>
+        <h1 class="section-title-01" id="skills-title">Skills</h1>
         <h2 class="section-title-02">Skills</h2>
         <div class="content">
           <div
             class="skills-description"
             role="region"
-            aria-label="Technical Proficiencies"
+            aria-labelledby="tech-proficiencies-title"
           >
-            <h3>Technical Proficiencies</h3>
+            <h3 id="tech-proficiencies-title">Technical Proficiencies</h3>
           </div>
         </div>
         <div class="skills__wrapper">
@@ -370,9 +381,9 @@
           <div
             class="skills-description"
             role="region"
-            aria-label="Professional Development"
+            aria-labelledby="professional-development-title"
           >
-            <h3>Professional Development</h3>
+            <h3 id="professional-development-title">Professional Development</h3>
             <p>
               I have pursued various courses and certifications to enhance my
               coding skills and broaden my knowledge in web development. These
@@ -388,9 +399,10 @@
           <div
             class="swiper certification-swiper"
             role="region"
-            aria-label="Certifications"
+            aria-labelledby="certifications-title"
           >
             <!-- Additional required wrapper -->
+            <h3 id="certifications-title" class="visually-hidden">Certifications</h3>
             <div class="swiper-wrapper">
               <!-- Slides -->
               <div class="swiper-slide">
@@ -543,10 +555,10 @@
             <div class="swiper-pagination" aria-label="Pagination"></div>
           </div>
 
-          <div class="skills-description" role="heading">
-            <h3>Work & Experience</h3>
+          <div class="skills-description" role="heading" aria-labelledby="work-experience-title">
+            <h3 id="work-experience-title">Work & Experience</h3>
           </div>
-          <div class="skills-info" role="region" aria-label="Work Experience">
+          <div class="skills-info" role="region" aria-labelledby="work-experience-title">
             <div class="experience-card">
               <div class="upper">
                 <h3>Bytesize IT Solutions (Remote, Qatar)</h3>
@@ -660,20 +672,20 @@
       class="contact section"
       id="contact"
       role="region"
-      aria-label="Contact Information"
+      aria-labelledby="contact-title"
     >
       <div class="container flex-center">
-        <h1 class="section-title-01">Contact Me</h1>
+        <h1 class="section-title-01" id="contact-title">Contact Me</h1>
         <h2 class="section-title-02">Contact Me</h2>
         <div class="content">
           <ul class="contact-list">
             <li>
-              <h3 class="item-title"><i class="fas fa-phone"></i>Phone</h3>
+              <h3 class="item-title"><i class="fas fa-phone" aria-hidden="true"></i>Phone</h3>
               <span>+974-50516167</span>
             </li>
             <li>
               <h3 class="item-title">
-                <i class="fas fa-envelope"></i>Email Address
+                <i class="fas fa-envelope" aria-hidden="true"></i>Email Address
               </h3>
               <span>
                 <a href="mailto:ndivyalakshmi88@gmail.com"
@@ -688,11 +700,11 @@
 
     <!--=======Footer=======-->
 
-    <footer role="contentinfo">
+    <footer role="contentinfo" aria-labelledby="footer-title">
       <div class="footer-container">
         <div class="about">
-          <h2>Divyalakshmi</h2>
-          <p>Sofware Consultant</p>
+          <h2 id="footer-title">Divyalakshmi</h2>
+          <p>Software Consultant</p>
         </div>
         <div class="hr"></div>
         <div class="info">
@@ -711,7 +723,8 @@
                 href="https://www.linkedin.com/in/divyalakshmi-natesan"
                 target="_blank"
                 aria-label="LinkedIn Profile"
-                ><i class="fab fa-linkedin"></i
+                tabindex="0"
+                ><i class="fab fa-linkedin" aria-hidden="true"></i
               ></a>
             </li>
             <li>
@@ -719,7 +732,8 @@
                 href="https://www.facebook.com/natchimuthu.gunasekaran.5"
                 target="_blank"
                 aria-label="Facebook Profile"
-                ><i class="fab fa-facebook"></i
+                tabindex="0"
+                ><i class="fab fa-facebook" aria-hidden="true"></i
               ></a>
             </li>
             <li>
@@ -727,7 +741,8 @@
                 href="https://www.instagram.com/divyalakshmi.natesan/"
                 target="_blank"
                 aria-label="Instagram Profile"
-                ><i class="fab fa-instagram"></i
+                tabindex="0"
+                ><i class="fab fa-instagram" aria-hidden="true"></i
               ></a>
             </li>
           </ul>
@@ -740,6 +755,7 @@
     </footer>
 
     <!--=======External scripts=======-->
+
     <script src="./assets/js/swiper-bundle.min.js"></script>
     <script src="./assets/js/main.js"></script>
   </body>
