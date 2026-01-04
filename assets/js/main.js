@@ -181,3 +181,44 @@ window.addEventListener("DOMContentLoaded", function () {
     closeBtn.setAttribute("aria-hidden", "true");
   }
 });
+
+// Experience Cards Scroll Animation
+document.addEventListener("DOMContentLoaded", function () {
+  const experienceCards = document.querySelectorAll(".experience-card-animate");
+
+  // Check if user prefers reduced motion
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (prefersReducedMotion) {
+    // If user prefers reduced motion, immediately show all cards
+    experienceCards.forEach((card) => {
+      card.classList.add("experience-card-visible");
+    });
+    return;
+  }
+
+  // Create Intersection Observer for scroll-based animation
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -100px 0px",
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Add visible class to trigger animation
+        entry.target.classList.add("experience-card-visible");
+
+        // Stop observing this card once it's animated
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Start observing all experience cards
+  experienceCards.forEach((card) => {
+    observer.observe(card);
+  });
+});

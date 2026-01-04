@@ -59,7 +59,7 @@ li {
   --transparent-color-02: rgba(106, 89, 209, 0.1);
   --line-color: #d7d7d7;
   --color-filter: invert(1);
-  --box-shawdow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  --box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   --small-font-size: 0.9em;
   --normal-font-size: 1em;
   --scroll-bar-color: #cfcadf;
@@ -71,13 +71,18 @@ li {
   --first-color: #fff;
   --second-color: #6a59d1;
   --third-color: #a9afc3;
+  --hover-color: #3e29c5;
   --body-bg-color: #0e1b31;
   --card-bg-color: #132347;
   --modal-bg-color: #102048;
   --bg-transparent-color: rgba(255, 255, 255, 0.1);
   --transparent-color-01: rgba(255, 255, 255, 0.1);
+  --transparent-color-02: rgba(106, 89, 209, 0.1);
   --line-color: #454f6b;
   --color-filter: invert(0);
+  --box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.05);
+  --small-font-size: 0.9em;
+  --normal-font-size: 1em;
   --scroll-bar-color: #c1ceff;
   --scroll-thumb-color: #282f4e;
   --scroll-thumb-hover-color: #454f6b;
@@ -883,6 +888,40 @@ footer .created-by P {
 .skills .container .content .experience-card:hover {
   transform: scale(1.03);
 }
+.skills .container .content .experience-cards-container .experience-card-animate {
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
+  transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.skills .container .content .experience-cards-container .experience-card-animate.experience-card-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+.skills .container .content .experience-cards-container .experience-card-animate[data-animation-delay="150"].experience-card-visible {
+  transition-delay: 0.15s;
+}
+.skills .container .content .experience-cards-container .experience-card-animate[data-animation-delay="300"].experience-card-visible {
+  transition-delay: 0.3s;
+}
+.skills .container .content .experience-cards-container .experience-card-animate[data-animation-delay="450"].experience-card-visible {
+  transition-delay: 0.45s;
+}
+.skills .container .content .experience-cards-container .experience-card-animate[data-animation-delay="600"].experience-card-visible {
+  transition-delay: 0.6s;
+}
+.skills .container .content .experience-cards-container .experience-card-animate[data-animation-delay="750"].experience-card-visible {
+  transition-delay: 0.75s;
+}
+.skills .container .content .experience-cards-container .experience-card-animate[data-animation-delay="900"].experience-card-visible {
+  transition-delay: 0.9s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .skills .container .content .experience-cards-container .experience-card-animate {
+    transition: none;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
 .skills .container .content .certification-swiper {
   margin-bottom: 80px;
 }
@@ -953,6 +992,10 @@ footer .created-by P {
 .skills .container .content .certification-swiper .swiper-pagination-bullet,
 .skills .container .content .certification-swiper .swiper-pagination-bullet-active {
   background: var(--second-color);
+}
+.skills .container .content .certification-swiper .swiper-pagination {
+  margin-top: 30px;
+  position: relative;
 }
 
 .contact .container .content {

@@ -280,6 +280,55 @@
     }
   }
 
+  // Experience Cards Animation
+  .experience-cards-container {
+    .experience-card-animate {
+      opacity: 0;
+      transform: translate3d(0, 50px, 0);
+      transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+      &.experience-card-visible {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+
+      // Staggered animation delays
+      &[data-animation-delay="150"].experience-card-visible {
+        transition-delay: 0.15s;
+      }
+
+      &[data-animation-delay="300"].experience-card-visible {
+        transition-delay: 0.3s;
+      }
+
+      &[data-animation-delay="450"].experience-card-visible {
+        transition-delay: 0.45s;
+      }
+
+      &[data-animation-delay="600"].experience-card-visible {
+        transition-delay: 0.6s;
+      }
+
+      &[data-animation-delay="750"].experience-card-visible {
+        transition-delay: 0.75s;
+      }
+
+      &[data-animation-delay="900"].experience-card-visible {
+        transition-delay: 0.9s;
+      }
+    }
+
+    // Accessibility: Respect prefers-reduced-motion
+    @media (prefers-reduced-motion: reduce) {
+      .experience-card-animate {
+        transition: none;
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+      }
+    }
+  }
+
   .certification-swiper {
     margin-bottom: 80px;
     .swiper-wrapper {
@@ -357,6 +406,11 @@
     .swiper-pagination-bullet,
     .swiper-pagination-bullet-active {
       background: var(--second-color);
+    }
+
+    .swiper-pagination {
+      margin-top: 30px;
+      position: relative;
     }
   }
 }
