@@ -139,6 +139,11 @@
   border-radius: 1.2rem;
   box-shadow: var(--box-shawdow);
   border-bottom: 3px solid var(--second-color);
+  transition: 0.3s ease;
+}
+
+.skills__panel--desc:hover {
+  transform: scale(1.03);
 }
 
 .skills__desc-block {
