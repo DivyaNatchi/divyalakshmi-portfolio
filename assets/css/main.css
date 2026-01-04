@@ -1051,6 +1051,11 @@ footer .created-by P {
   margin-bottom: 10px;
   border-bottom: 2px solid var(--line-color);
 }
+@media screen and (max-width: 768px) {
+  .skills .container .content .certification-swiper .swiper-wrapper .swiper-slide .certification-details p {
+    display: none;
+  }
+}
 .skills .container .content .certification-swiper .swiper-wrapper .swiper-slide .certification-details h3 {
   color: var(--first-color);
   font-size: 1.3em;

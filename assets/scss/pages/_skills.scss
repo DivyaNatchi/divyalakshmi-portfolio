@@ -429,6 +429,10 @@
             padding-bottom: 15px;
             margin-bottom: 10px;
             border-bottom: 2px solid var(--line-color);
+
+            @include mixins.responsive(md) {
+              display: none;
+            }
           }
 
           h3 {
