@@ -465,7 +465,10 @@ footer .created-by P {
 }
 @media only screen and (max-width: 576px) {
   .home .home-container {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
   }
 }
 .home .home-container .home-img {
@@ -473,7 +476,9 @@ footer .created-by P {
 }
 @media only screen and (max-width: 576px) {
   .home .home-container .home-img {
-    position: absolute;
+    position: relative;
+    margin-bottom: 2rem;
+    order: -1;
   }
 }
 .home .home-container .home-img img {
@@ -482,18 +487,29 @@ footer .created-by P {
 }
 @media only screen and (max-width: 576px) {
   .home .home-container .home-img img {
-    width: 65%;
-    transform: translate(80px, -200px);
+    width: 100%;
+    max-width: 300px;
+    transform: translate(0, 0);
   }
 }
 @media only screen and (max-width: 576px) {
   .home .home-container .info {
     width: 100%;
-    transform: translate(0px, 230px);
-    font-size: 0.8rem;
+    text-align: left;
+    transform: none;
+    font-size: 0.9rem;
   }
   .home .home-container .info h2 {
-    font-size: 2.5rem !important;
+    font-size: 2rem !important;
+    line-height: 2.5rem;
+  }
+  .home .home-container .info h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .home .home-container .info p {
+    font-size: 0.9rem;
+    max-width: 100%;
   }
 }
 .home .home-container .info h2 {
@@ -533,9 +549,14 @@ footer .created-by P {
 }
 @media only screen and (max-width: 576px) {
   .home .home-container .media-icons {
-    transform: translate(-30px, -300px);
+    flex-direction: column;
+    position: absolute;
+    left: -30px;
+    bottom: 600px;
     width: 25px;
-    margin-bottom: 80px;
+    margin-left: 0;
+    margin-left: 20px;
+    transform: none;
   }
 }
 .home .home-container .media-icons a {
@@ -630,25 +651,43 @@ footer .created-by P {
   align-items: stretch;
   flex-wrap: wrap;
   margin-bottom: 80px;
+  width: 100%;
 }
 @media (max-width: 900px) {
   .skills__wrapper {
     flex-direction: column;
     gap: 1.5rem;
+    align-items: center;
   }
 }
 
 .skills__panel {
   flex: 1 1 0;
-  min-width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media (max-width: 900px) {
+  .skills__panel {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+  }
 }
 
 .skills__panel--carousel {
   max-width: 500px;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 900px) {
+  .skills__panel--carousel {
+    max-width: 100%;
+    width: 100%;
+    order: 2;
+  }
 }
 
 .skills__carousel {
@@ -658,6 +697,19 @@ footer .created-by P {
   width: 100%;
   max-width: 350px;
   height: 400px;
+}
+@media (max-width: 900px) {
+  .skills__carousel {
+    max-width: 100%;
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 600px) {
+  .skills__carousel {
+    height: 380px;
+  }
 }
 
 .skills__carousel-btn {
@@ -698,16 +750,18 @@ footer .created-by P {
 .skills__card {
   background: var(--card-bg-color);
   border-radius: 1.2rem;
-  box-shadow: var(--box-shawdow);
+  box-shadow: var(--box-shadow);
   border-bottom: 3px solid var(--second-color);
   padding: 2rem 1.5rem;
   width: 100%;
   height: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
 }
 
 .skills__card-title {
@@ -727,6 +781,14 @@ footer .created-by P {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
+  flex: 1;
+  width: 100%;
+  overflow: hidden;
+}
+@media (max-width: 600px) {
+  .skills__card-list {
+    gap: 0.5rem;
+  }
 }
 
 .skills__logo {
@@ -742,15 +804,21 @@ footer .created-by P {
   height: 100%;
 }
 
+.swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
 .swiper-slide {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
 }
 
 .skills__card:hover {
   transform: scale(1.03);
-  box-shadow: var(--box-shawdow);
+  box-shadow: var(--box-shadow);
 }
 
 .skills__panel--desc {
@@ -760,9 +828,17 @@ footer .created-by P {
   padding: 2rem 1.5rem;
   background: var(--card-bg-color);
   border-radius: 1.2rem;
-  box-shadow: var(--box-shawdow);
+  box-shadow: var(--box-shadow);
   border-bottom: 3px solid var(--second-color);
   transition: 0.3s ease;
+}
+@media (max-width: 900px) {
+  .skills__panel--desc {
+    max-width: 100%;
+    width: 100%;
+    order: 1;
+    margin-bottom: 1rem;
+  }
 }
 
 .skills__panel--desc:hover {
@@ -790,37 +866,22 @@ footer .created-by P {
   line-height: 1.6;
 }
 
-@media (max-width: 900px) {
-  .skills__wrapper {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .skills__panel--carousel,
-  .skills__panel--desc {
-    max-width: 100%;
-    margin: 0 auto;
-  }
-  .skills__carousel {
-    max-width: 100%;
-    height: 350px;
-  }
-  .skills__cards {
-    width: 100%;
-    min-height: 300px;
-  }
-  .skills__carousel-btn--prev {
-    left: 0.5rem;
-  }
-  .skills__carousel-btn--next {
-    right: 0.5rem;
-  }
-}
 @media (max-width: 600px) {
   .skills__panel--desc {
     padding: 1.2rem 0.7rem;
   }
   .skills__card {
     padding: 1.2rem 0.7rem;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  .skills__card-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 0.4rem 0.8rem;
+  }
+  .skills__card-list li {
+    font-size: 0.9rem;
   }
 }
 .skills .container .content {
@@ -851,7 +912,7 @@ footer .created-by P {
   border-bottom: 3px solid var(--second-color);
   padding: 35px;
   border-radius: 6px;
-  box-shadow: var(--box-shawdow);
+  box-shadow: var(--box-shadow);
   transition: 0.3s ease;
 }
 .skills .container .content .experience-card .upper {
