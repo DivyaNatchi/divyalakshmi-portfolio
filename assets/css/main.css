@@ -552,11 +552,10 @@ footer .created-by P {
   .home .home-container .media-icons {
     flex-direction: column;
     position: absolute;
-    left: -30px;
+    left: 0;
     bottom: 600px;
     width: 25px;
     margin-left: 0;
-    margin-left: 20px;
     transform: none;
   }
 }

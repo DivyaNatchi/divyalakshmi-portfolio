@@ -116,11 +116,10 @@
       @include mixins.responsive(sm) {
         flex-direction: column;
         position: absolute;
-        left: -30px;
+        left: 0;
         bottom: 600px;
         width: 25px;
         margin-left: 0;
-        margin-left: 20px;
         transform: none;
       }
 
